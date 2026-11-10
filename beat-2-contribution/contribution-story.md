@@ -140,10 +140,10 @@ macOS 26.5.1 on a MacBook Pro. This is a docs-only issue, so no language runtime
 
 **Toolkit**
 
-- Tool:
-- What it produced:
-- Difficulties:
-- What changed:
+- Tool: repro-check, run on my claim draft and then on my claim and repro report together
+- What it produced: an accept on the claim, then a reject on the repro report because the environment check failed, then an accept after my fix
+- Difficulties: my local clone was still on an old branch from issue #73, so I recorded commit 4826698, which isn't on upstream main, and I left out the macOS version
+- What changed: I switched to main, re-ran the check at f89c06f, added macOS 26.5.1 to the report, and now check which branch I'm on before recording a commit
 
 ---
 
