@@ -1,4 +1,4 @@
-# Contribution: [Issue Title]
+# Contribution: Add example curl commands to the API docs
 
 Path: `beat-2-contribution/contribution-story.md`
 
@@ -7,12 +7,11 @@ the repository is not read. **Keep every section header below under its exact na
 format criteria grade exactly that. Your course repo link is the whole submission: no tool
 files and no evidence uploads are part of Assignment 5.
 
-**Contribution Number:** [1]
-**Student:** [Student name]
-**GitHub Username:** [your GitHub username, exactly as it appears on your profile - no @, no
-profile URL. Your comments upstream are identified by this name.]
-**Issue:** [GitHub issue link]
-**Pull Request:** [GitHub PR link, once opened]
+**Contribution Number:** 1
+**Student:** Patrice
+**GitHub Username:** pclerveau2025
+**Issue:** https://github.com/codepath/pathreview-ai301-fa26-s1/issues/47
+**Pull Request:** pending
 
 One repository, built across units 5 to 8, telling the whole story of your real
 contribution. Fill it as you work, not at the end — the sections below ask for evidence that
@@ -79,24 +78,18 @@ drafted, what you did with the draft.]
 
 ## Why I Chose This Issue
 
-[1-2 paragraphs in your own words: how you searched, what your scan
-surfaced, what your scout's verdict said, why this issue fits your
-profile, and what you hope to learn. If your scout's verdict on it
-was reject and you chose it anyway, say so here and say why; choosing
-against your own tool silently is what loses points. Close with an
-honest read of the tool itself: where the scout fell short on a real
-wild search and what you changed or would change, or what convinced
-you it held up. **Record the link to your claim comment in this section too.**
-Not claimed yet? Write `claim pending` and today's date where the link goes,
-and add the link the moment your claim lands.]
+I searched the Path Review repo with my scout for open "good first issue" + "tier-1" issues, dropped assigned or stale ones, and ranked by fewest comments. The first scan rejected four of five issues because classmates had open PRs on them. I fixed that check and graded my two picks, #12 and #37. Both were accepted, but #12 already had a classmate asking to work on it and #37 already had a classmate's open PR, so I treated both as taken. A second scan showed #11 and #47 had no claims and no PRs, but my 60-day filter had kept them out of grading. I graded #47 directly and it was accepted: one task in one file, adding example curl commands to docs/API.md. It fits my Python and web background and has a clear description, and I want to practice reading an unfamiliar codebase by documenting how its endpoints really behave.
+
+My scout mostly held up, but it fell short twice. Its claim check treated classmates' open PRs as blocking, and my 60-day filter hid the one issue nobody had touched. I fixed the first in the rubric. I would remove or reverse the 60-day filter in my search strategy, because in this repo an old untouched issue is a good sign.
+
+Claim comment: https://github.com/codepath/pathreview-ai301-fa26-s1/issues/47#issuecomment-6779859177
 
 **Toolkit**
 
-- Tool: issue-scout (your scout: your search strategy, your rubric),
-  and how you used it
-- What it produced: [the scan and its verdict on this issue, described]
-- Difficulties: [where it fell short, or "none met" if none did]
-- What changed: [what you patched or would update, or "nothing"]
+- Tool: issue-scout (my search strategy and rubric), run as a scan and as grading on specific issues
+- What it produced: a scan of five graded issues, re-grades of #12 and #37 after the scope patch, and an accept verdict on #47 with no claims and no PRs
+- Difficulties: the claim check rejected issues over classmates' open PRs, and the 60-day filter hid #47 from the scan
+- What changed: edited the claim check in rubric.md, patched the scope check, and I would remove the 60-day filter from search-strategy.md
 
 ---
 
