@@ -122,21 +122,18 @@ Claim comment: https://github.com/codepath/pathreview-ai301-fa26-s1/issues/47#is
 
 **Environment Setup**
 
-[What a stranger would need to stand this up: your operating system,
-the relevant versions (language, runtime, package manager, the project
-itself), and how you set the project up. Then the challenges you faced
-and how you solved them, or that none came up.]
+macOS on a MacBook Pro. This is a docs-only issue, so no language runtime or install is needed: I cloned codepath/pathreview-ai301-fa26-s1 and read docs/API.md at commit 4826698. No challenges came up.
 
 **Steps to Reproduce**
 
-1. [Step 1]
-2. [Step 2]
-3. [Observed result]
+1. 1. git clone https://github.com/codepath/pathreview-ai301-fa26-s1.git, then cd into it and git pull.
+2. 2. Run grep -c curl docs/API.md and wc -l docs/API.md.
+3. Observed: grep prints 0 and the file is 32 lines. The doc lists endpoints under Profiles and Reviews with one-line descriptions and has no curl examples anywhere.
 
 **Reproduction Evidence**
 
-- **Commit showing reproduction:** [link to commit in your fork]
-- **Screenshots/logs:** [if applicable]
+- **Commit showing reproduction:** none
+- **Screenshots/logs:** grep -c curl docs/API.md printed 0; wc -l printed 32 docs/API.md
 - **My findings:** [what you discovered during reproduction; an
   honest, evidenced cannot-reproduce that led you to re-pick or ask
   the maintainer belongs here and costs you nothing]
