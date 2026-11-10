@@ -122,7 +122,7 @@ Claim comment: https://github.com/codepath/pathreview-ai301-fa26-s1/issues/47#is
 
 **Environment Setup**
 
-macOS on a MacBook Pro. This is a docs-only issue, so no language runtime or install is needed: I cloned codepath/pathreview-ai301-fa26-s1 and read docs/API.md at commit 4826698. No challenges came up.
+macOS 26.5.1 on a MacBook Pro. This is a docs-only issue, so no language runtime or install is needed: I cloned codepath/pathreview-ai301-fa26-s1 and read docs/API.md at commit f89c06f (main). No challenges came up.
 
 **Steps to Reproduce**
 
