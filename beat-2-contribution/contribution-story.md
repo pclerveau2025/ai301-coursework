@@ -58,11 +58,9 @@ one in the week it belongs to.
 
 I built a scout that searches Path Review for open "good first issue" + "tier-1" issues, drops assigned or stale ones, ranks by fewest comments, and grades the top five. My first scan rejected four of five issues because the "Not already claimed" check counted classmates' open PRs, which the Path Review house rule says shouldn't block an issue. I edited that row in rubric.md so classmates' open PRs don't count in Path Review, while merged PRs and closed issues still fail. When I graded my two picks, #12 and #37, both were accepted, and #37 only passed because of the fix.
 
-**Unit 6: [one line on the tool work]**
+**Unit 6: Installed a voice guard and wrote my upstream rules**
 
-[2-4 sentences: the voice-guard, the repo-memory file. What broke or
-fell short, and what changed because of it. "Nothing broke" counts when
-it is true - say how you know.]
+I wrote upstream rules for claims, questions, and pings into my voice guide and installed a hook that checks every comment I post through Claude Code. The first settings write failed silently, so the hook check said "not found"; I rewrote it with a short Python command and the wiring test then blocked the body-less command as it should. My first claim draft included a promise I never asked for, and I decided to keep it only because I will really test my own work, so I now read drafts for added promises before posting.
 
 **Unit 7: [one line on the tool work]**
 
