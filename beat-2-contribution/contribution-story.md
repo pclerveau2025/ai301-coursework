@@ -55,10 +55,9 @@ happened; these entries are the toolkit's own timeline.
 All four entries are graded. Keep every heading below, and fill each
 one in the week it belongs to.
 
-**Unit 5: [one line on the tool work]**
+**Unit 5: Built an issue scout that searches Path Review and grades candidates**
 
-[2-4 sentences: what you built (the scout, your strategy), what broke
-or fell short, what changed because of it.]
+I built a scout that searches Path Review for open "good first issue" + "tier-1" issues, drops assigned or stale ones, ranks by fewest comments, and grades the top five. My first scan rejected four of five issues because the "Not already claimed" check counted classmates' open PRs, which the Path Review house rule says shouldn't block an issue. I edited that row in rubric.md so classmates' open PRs don't count in Path Review, while merged PRs and closed issues still fail. When I graded my two picks, #12 and #37, both were accepted, and #37 only passed because of the fix.
 
 **Unit 6: [one line on the tool work]**
 
