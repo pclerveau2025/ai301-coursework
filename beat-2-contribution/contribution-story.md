@@ -60,7 +60,7 @@ I built a scout that searches Path Review for open "good first issue" + "tier-1"
 
 **Unit 6: Installed a voice guard and wrote my upstream rules**
 
-I wrote upstream rules for claims, questions, and pings into my voice guide and installed a hook that checks every comment I post through Claude Code. The first settings write failed silently, so the hook check said "not found"; I rewrote it with a short Python command and the wiring test then blocked the body-less command as it should. My first claim draft included a promise I never asked for, and I decided to keep it only because I will really test my own work, so I now read drafts for added promises before posting.
+I wrote upstream rules for claims, questions, and pings into my voice guide and installed a hook that checks every comment I post through Claude Code. The first settings write failed silently, so the hook check said "not found"; I rewrote it with a short Python command and the wiring test then blocked the body-less command as it should. My first claim draft included a promise I never asked for, that I would run every command myself, and I posted it unchanged. I did not run the curl commands before opening my PR, so I should have deleted that line, and I now read drafts for added promises before posting.
 
 **Unit 7: Installed the ship-gate and wrote my manifest**
 
