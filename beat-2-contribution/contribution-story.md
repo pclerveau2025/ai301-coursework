@@ -172,14 +172,14 @@ Deviation: the plan listed only a login example, but I also added a register exa
 
 ## Testing Strategy
 
-Before the fix, on main at f89c06f, grep -c curl docs/API.md printed 0. After the fix, on branch docs/47-curl-examples at commit 2b21bc0, it prints 4, and git diff --stat shows only docs/API.md changed, with 34 lines added. The repo checks from my manifest also pass: make check is clean (ruff, black, mypy) and make test-unit shows 375 passed, 53 xfailed, the same as main. I did not run the curl commands against a live server, so the examples are checked against the route code only.
+Before the fix, on main at f89c06f, grep -c curl docs/API.md printed 0. After the fix, on branch docs/47-curl-examples at commit 2b21bc0, it prints 4, and git diff --stat shows only docs/API.md changed, with 34 lines added. The repo checks from my manifest also pass: make check is clean (ruff, black, mypy) and make test-unit shows 375 passed, 53 xfailed, the same as main. I also ran all four curl commands against a local server (Docker Postgres and Redis, uvicorn on port 8000): register and login each returned a token, POST /profiles returned a profile with an id, and POST /reviews returned a review with status pending.
 
 **Toolkit**
 
 - Tool: make check and make test-unit from my ship manifest
 - What it produced: make check clean; make test-unit 375 passed, 53 xfailed, the same as main
-- Difficulties: The checks cannot prove the curl examples work, only that nothing broke
-- What changed: I stated in the PR that I did not run the curl commands against a live server
+- Difficulties: make check and make test-unit cannot prove the curl examples work, so I ran them by hand after opening the PR
+- What changed: all four commands worked against a live local server; I will tell the maintainers on the PR
 
 ---
 
@@ -193,14 +193,14 @@ Created branch docs/47-curl-examples from main at f89c06f. Read the route files 
 
 **2026-11-10**
 
-Ran make check and make test-unit (375 passed, 53 xfailed), wrote test_evidence.md and pr_draft.md, passed the ship-gate, and opened PR 253 on the original repo. I did not run the curl commands against a live server.
+Ran make check and make test-unit (375 passed, 53 xfailed), wrote test_evidence.md and pr_draft.md, passed the ship-gate, and opened PR 253 on the original repo. After opening the PR I ran all four curl commands against a local server and each returned what the docs say.
 
 **Toolkit**
 
 - Tool: Claude Code, to read the code and draft the docs edit
 - What it produced: A docs/API.md edit of 34 added lines in one commit, 2b21bc0
 - Difficulties: Claude added a register example my plan did not list, and my claim comment promised I would run every command myself
-- What changed: I recorded the deviation in Solution Approach and said plainly in the PR and here that I did not run the curl commands
+- What changed: I recorded the deviation in Solution Approach, and after opening the PR I ran the curl commands against a local server and they worked
 
 ---
 
@@ -208,7 +208,7 @@ Ran make check and make test-unit (375 passed, 53 xfailed), wrote test_evidence.
 
 **PR Link:** https://github.com/codepath/pathreview-ai301-fa26-s1/pull/253
 
-**PR Description:** Adds curl examples to docs/API.md for register, login, POST /profiles and POST /reviews. Fixes #47. Docs only, 34 lines added. make check clean, make test-unit 375 passed, 53 xfailed. The curl commands were written from the route code and not run against a live server.
+**PR Description:** Adds curl examples to docs/API.md for register, login, POST /profiles and POST /reviews. Fixes #47. Docs only, 34 lines added. make check clean, make test-unit 375 passed, 53 xfailed. The curl commands were written from the route code; I ran them against a local server after opening this PR and they worked.
 
 **Maintainer Feedback:**
 
