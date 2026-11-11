@@ -60,11 +60,11 @@ I built a scout that searches Path Review for open "good first issue" + "tier-1"
 
 **Unit 6: Installed a voice guard and wrote my upstream rules**
 
-I wrote upstream rules for claims, questions, and pings into my voice guide and installed a hook that checks every comment I post through Claude Code. The first settings write failed silently, so the hook check said "not found"; I rewrote it with a short Python command and the wiring test then blocked the body-less command as it should. My first claim draft included a promise I never asked for, that I would run every command myself, and I posted it unchanged. I did not run the curl commands before opening my PR, so I should have deleted that line, and I now read drafts for added promises before posting.
+I wrote upstream rules for claims, questions, and pings into my voice guide and installed a hook that checks every comment I post through Claude Code. The first settings write failed silently, so the hook check said "not found"; I rewrote it with a short Python command and the wiring test then blocked the body-less command as it should. My first claim draft included a promise I never asked for, that I would run every command myself, and I posted it unchanged. I did not run the curl commands before opening my PR, so I broke that promise at first and only kept it afterward, when I ran all four against a local server. I now read drafts for added promises before posting.
 
 **Unit 7: Installed the ship-gate and wrote my manifest**
 
-I installed the ship-gate and wrote a manifest with two checks from CONTRIBUTING.md, make check and make test-unit. Its hook test stopped gh pr create with no PR text, as expected, and on my branch it ended with ship-gate: PASS. My local clone was still on an old branch with leftover files from a different issue, so I switched to main and moved those files out before the gate ran. Its notes also flagged that my claim promised to run every command myself while my PR says I did not.
+I installed the ship-gate and wrote a manifest with two checks from CONTRIBUTING.md, make check and make test-unit. Its hook test stopped gh pr create with no PR text, as expected, and on my branch it ended with ship-gate: PASS. My local clone was still on an old branch with leftover files from a different issue, so I switched to main and moved those files out before the gate ran. Its notes also flagged that my claim promised to run every command myself while my PR said I had not, so I ran them against a local server afterward.
 
 **Unit 8: Installed the PR monitor and wrote my playbook**
 
@@ -220,7 +220,7 @@ Ran make check and make test-unit (375 passed, 53 xfailed), wrote test_evidence.
 
 - Tool: ship-gate, run by hand on my branch before opening the PR
 - What it produced: ship-gate: PASS, then PR 253 opened on the original repo
-- Difficulties: Its notes pointed out that my claim promised to run every command and my PR says I did not
+- Difficulties: Its notes pointed out that my claim promised to run every command while my PR said I had not; I ran them afterward and they worked
 - What changed: I kept the PR honest about it; I would run the commands before opening next time
 
 ---
