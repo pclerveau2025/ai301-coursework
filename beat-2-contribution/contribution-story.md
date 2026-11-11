@@ -66,10 +66,9 @@ I wrote upstream rules for claims, questions, and pings into my voice guide and 
 
 I installed the ship-gate and wrote a manifest with two checks from CONTRIBUTING.md, make check and make test-unit. Its hook test stopped gh pr create with no PR text, as expected, and on my branch it ended with ship-gate: PASS. My local clone was still on an old branch with leftover files from a different issue, so I switched to main and moved those files out before the gate ran. Its notes also flagged that my claim promised to run every command myself while my PR says I did not.
 
-**Unit 8: [one line on the tool work]**
+**Unit 8: Installed the PR monitor and wrote my playbook**
 
-[2-4 sentences: the PR-monitor and your playbook. What it read, what it
-drafted, what you did with the draft.]
+I installed the PR monitor and wrote a playbook from CONTRIBUTING.md, which asks me to answer reviewers within 48 hours but states no maintainer wait time. No PRs have merged in this repo, so I could not measure a real wait and set a 7-day nudge threshold as a guess. On my PR, which was under a day old with 5 passing checks and no comments, it drafted a wait note, so I posted nothing. I would revise the threshold once any PR in this repo merges.
 
 ---
 
@@ -235,25 +234,21 @@ adapts into it]
 
 **Technical Skills Gained**
 
-[What you learned technically, named concretely.]
+I learned to read FastAPI route files and Pydantic schemas to find the exact request fields and auth for an endpoint, how multipart form data differs from JSON in curl, and how to run a repo's make targets before opening a PR.
 
 **Challenges Overcome**
 
-[What was hard and how you solved it; point at the real events, the
-Toolkit blocks above are full of them.]
+My first two issue picks were already taken by classmates, so I re-ran my scout and found an untouched one that my own 60-day filter had hidden. My local clone also sat on an old branch, which made repro-check reject my commit hash until I switched to main.
 
 **What I'd Do Differently Next Time**
 
-[Reflection on your process.]
+I would run the curl commands against a live server before opening the PR, because my claim promised I would. I would also run plan-check, which I skipped, and fix my scout's 60-day filter.
 
 ---
 
 ## Resources Used
 
-[What actually helped, not a reading list. List things this story
-already shows you using: the doc you followed to set the environment
-up, the thread that explained the bug, the person who answered you.
-One real entry beats ten plausible ones.]
+docs/CONTRIBUTING.md for the checks and the 48-hour reply rule, and api/routes and api/schemas in the Path Review repo for the real request fields.
 
 - [Link to documentation that helped]
 - [Discussion, issue, or post that helped]
