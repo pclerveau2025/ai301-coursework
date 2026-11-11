@@ -62,10 +62,9 @@ I built a scout that searches Path Review for open "good first issue" + "tier-1"
 
 I wrote upstream rules for claims, questions, and pings into my voice guide and installed a hook that checks every comment I post through Claude Code. The first settings write failed silently, so the hook check said "not found"; I rewrote it with a short Python command and the wiring test then blocked the body-less command as it should. My first claim draft included a promise I never asked for, and I decided to keep it only because I will really test my own work, so I now read drafts for added promises before posting.
 
-**Unit 7: [one line on the tool work]**
+**Unit 7: Installed the ship-gate and wrote my manifest**
 
-[2-4 sentences: the ship-gate and your gate manifest. What it produced
-on your real branch, what fought you, what changed because of it.]
+I installed the ship-gate and wrote a manifest with two checks from CONTRIBUTING.md, make check and make test-unit. Its hook test stopped gh pr create with no PR text, as expected, and on my branch it ended with ship-gate: PASS. My local clone was still on an old branch with leftover files from a different issue, so I switched to main and moved those files out before the gate ran. Its notes also flagged that my claim promised to run every command myself while my PR says I did not.
 
 **Unit 8: [one line on the tool work]**
 
