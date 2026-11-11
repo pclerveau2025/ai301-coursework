@@ -124,9 +124,9 @@ macOS 26.5.1 on a MacBook Pro. This is a docs-only issue, so no language runtime
 
 **Steps to Reproduce**
 
-1. 1. git clone https://github.com/codepath/pathreview-ai301-fa26-s1.git, then cd into it and git pull.
-2. 2. Run grep -c curl docs/API.md and wc -l docs/API.md.
-3. Observed: grep prints 0 and the file is 32 lines. The doc lists endpoints under Profiles and Reviews with one-line descriptions and has no curl examples anywhere.
+1. git clone https://github.com/codepath/pathreview-ai301-fa26-s1.git, then cd into it and git pull.
+2. Run grep -c curl docs/API.md and wc -l docs/API.md.
+**Observed result:** grep prints 0 and the file is 32 lines. The doc lists endpoints under Profiles and Reviews with one-line descriptions and has no curl examples anywhere.
 
 **Reproduction Evidence**
 
