@@ -189,16 +189,15 @@ Before the fix, on main at f89c06f, grep -c curl docs/API.md printed 0. After th
 
 ## Implementation Notes
 
-[A running log, added to as you work. Date each entry. What you
-built, decisions you made when you made them, wrong turns included.]
+Dated log of what I did.
 
-**[Date]**
+**2026-11-10**
 
-[Entry]
+Created branch docs/47-curl-examples from main at f89c06f. Read the route files and schemas, wrote plan.md, and added curl examples for register, login, POST /profiles and POST /reviews to docs/API.md. Committed as 2b21bc0.
 
-**[Date]**
+**2026-11-10**
 
-[Entry]
+Ran make check and make test-unit (375 passed, 53 xfailed), wrote test_evidence.md and pr_draft.md, passed the ship-gate, and opened PR 253 on the original repo. I did not run the curl commands against a live server.
 
 **Toolkit**
 
@@ -222,9 +221,7 @@ adapts into it]
   state and costs you nothing]
 - [Date]: [how you addressed it]
 
-**Status:** [Awaiting review / Iterating / Merged / Closed. The
-status is a fact you record, never a grade: the PR is graded as
-opened.]
+**Status:** Awaiting review
 
 **Toolkit**
 
