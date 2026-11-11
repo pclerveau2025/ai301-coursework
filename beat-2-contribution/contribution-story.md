@@ -132,9 +132,7 @@ macOS 26.5.1 on a MacBook Pro. This is a docs-only issue, so no language runtime
 
 - **Commit showing reproduction:** none
 - **Screenshots/logs:** grep -c curl docs/API.md printed 0; wc -l printed 32 docs/API.md
-- **My findings:** [what you discovered during reproduction; an
-  honest, evidenced cannot-reproduce that led you to re-pick or ask
-  the maintainer belongs here and costs you nothing]
+- **My findings:** The issue is real today: docs/API.md has zero curl examples, as the issue says. I confirmed it on main at f89c06f.
 
 **Toolkit**
 
@@ -157,9 +155,9 @@ Add curl examples for register, login, POST /profiles and POST /reviews to docs/
 
 **Implementation Plan**
 
-1. [Modify file X to do Y]
-2. [Add or change Z]
-3. [Update tests]
+1. Edit docs/API.md only.
+2. Add curl examples for register, login, POST /profiles and POST /reviews.
+3. No tests to change (docs only); run make check and make test-unit.
 
 Deviation: the plan listed only a login example, but I also added a register example, because register returns a token in one call and a new user has to register first.
 
@@ -210,14 +208,11 @@ Ran make check and make test-unit (375 passed, 53 xfailed), wrote test_evidence.
 
 **PR Link:** https://github.com/codepath/pathreview-ai301-fa26-s1/pull/253
 
-**PR Description:** [what the PR says; much of the content above
-adapts into it]
+**PR Description:** Adds curl examples to docs/API.md for register, login, POST /profiles and POST /reviews. Fixes #47. Docs only, 34 lines added. make check clean, make test-unit 375 passed, 53 xfailed. The curl commands were written from the route code and not run against a live server.
 
 **Maintainer Feedback:**
 
-- [Date]: [feedback received, or "none yet"; silence is a normal
-  state and costs you nothing]
-- [Date]: [how you addressed it]
+- 2026-11-10: none yet
 
 **Status:** Awaiting review
 
@@ -250,5 +245,5 @@ I would run the curl commands against a live server before opening the PR, becau
 
 docs/CONTRIBUTING.md for the checks and the 48-hour reply rule, and api/routes and api/schemas in the Path Review repo for the real request fields.
 
-- [Link to documentation that helped]
-- [Discussion, issue, or post that helped]
+- docs/CONTRIBUTING.md in the Path Review repo (checks and the 48-hour reply rule)
+- Issue 47 thread in codepath/pathreview-ai301-fa26-s1
