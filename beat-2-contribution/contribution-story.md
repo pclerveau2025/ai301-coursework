@@ -163,10 +163,10 @@ Deviation: the plan listed only a login example, but I also added a register exa
 
 **Toolkit**
 
-- Tool: plan-check, which I did not run on my plan; I wrote plan.md by hand from the route code
-- What it produced: plan.md with Analysis, Proposed Solution and Implementation Plan
-- Difficulties: I skipped the plan-check step, so the plan was never graded
-- What changed: I added a deviation for the register example and would run plan-check next time
+- Tool: plan-check, run on plan.md and plan-comment.md after I had already built the fix
+- What it produced: accept, with all six checks passing; it noted the plan was graded after the build and that my plan left out the register example
+- Difficulties: I ran it late, after the PR was open, so it could not shape the plan; it also said the plan never recorded running the commands
+- What changed: I added the register deviation to the story, ran the commands afterward, and would run plan-check before building next time
 
 ---
 
