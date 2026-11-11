@@ -11,7 +11,7 @@ files and no evidence uploads are part of Assignment 5.
 **Student:** Patrice
 **GitHub Username:** pclerveau2025
 **Issue:** https://github.com/codepath/pathreview-ai301-fa26-s1/issues/47
-**Pull Request:** pending
+**Pull Request:** https://github.com/codepath/pathreview-ai301-fa26-s1/pull/253
 
 One repository, built across units 5 to 8, telling the whole story of your real
 contribution. Fill it as you work, not at the end — the sections below ask for evidence that
@@ -95,19 +95,19 @@ Claim comment: https://github.com/codepath/pathreview-ai301-fa26-s1/issues/47#is
 
 **Problem Description**
 
-[In your own words, what is broken or missing?]
+docs/API.md lists the API endpoints with one-line descriptions but has no curl examples, so a new developer cannot see how to get a token or send a request to POST /profiles or POST /reviews.
 
 **Expected Behavior**
 
-[What should happen?]
+The doc should show a working curl example for getting a token, for POST /profiles (multipart form, Bearer header) and for POST /reviews (JSON with profile_id).
 
 **Current Behavior**
 
-[What actually happens?]
+grep -c curl docs/API.md prints 0 on main at f89c06f. The doc has 32 lines and no examples anywhere.
 
 **Affected Components**
 
-[Which parts of the codebase are involved?]
+docs/API.md is the file I change. I read api/routes/auth.py, api/routes/profiles.py, api/routes/reviews.py and api/schemas/user.py to get the fields right. No code changes.
 
 **Toolkit**
 
@@ -151,13 +151,11 @@ macOS 26.5.1 on a MacBook Pro. This is a docs-only issue, so no language runtime
 
 **Analysis**
 
-[Your analysis of the root cause: what is causing the issue, traced
-to the files and functions involved.]
+docs/API.md lists the endpoints with one-line descriptions only and has zero curl examples (grep -c curl docs/API.md prints 0 on main at f89c06f). The request details live in api/routes/profiles.py (POST /profiles, multipart form data with optional github_username, portfolio_url, resume_file) and api/routes/reviews.py (POST /reviews, JSON body with required profile_id). Both need an Authorization: Bearer token from POST /auth/login or /auth/register.
 
 **Proposed Solution**
 
-[High-level description of your fix approach, and what you are
-deliberately NOT changing.]
+Add curl examples for register, login, POST /profiles and POST /reviews to docs/API.md. Use a Markdown resume in the profile example, because PDF uploads look broken at profiles.py line 63. I am not changing any code, and I am not documenting other endpoints or fixing the PDF issue here.
 
 **Implementation Plan**
 
@@ -165,8 +163,7 @@ deliberately NOT changing.]
 2. [Add or change Z]
 3. [Update tests]
 
-[Record deviations here as they happen: what changed mid-build and
-why. A recorded deviation is honest work; silent drift is not.]
+Deviation: the plan listed only a login example, but I also added a register example, because register returns a token in one call and a new user has to register first.
 
 **Toolkit**
 
@@ -179,10 +176,7 @@ why. A recorded deviation is honest work; silent drift is not.]
 
 ## Testing Strategy
 
-[What observable checks prove the fix: your reproduction steps re-run
-against the built change (before and after), and the repo's own test
-suite or checks with the outcome shown. "Tests pass" with nothing
-observable named is not a strategy.]
+Before the fix, on main at f89c06f, grep -c curl docs/API.md printed 0. After the fix, on branch docs/47-curl-examples at commit 2b21bc0, it prints 4, and git diff --stat shows only docs/API.md changed, with 34 lines added. The repo checks from my manifest also pass: make check is clean (ruff, black, mypy) and make test-unit shows 375 passed, 53 xfailed, the same as main. I did not run the curl commands against a live server, so the examples are checked against the route code only.
 
 **Toolkit**
 
@@ -217,7 +211,7 @@ built, decisions you made when you made them, wrong turns included.]
 
 ## Pull Request
 
-**PR Link:** [GitHub PR URL when opened]
+**PR Link:** https://github.com/codepath/pathreview-ai301-fa26-s1/pull/253
 
 **PR Description:** [what the PR says; much of the content above
 adapts into it]
