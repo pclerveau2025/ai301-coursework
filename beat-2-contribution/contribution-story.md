@@ -200,7 +200,7 @@ Ran make check and make test-unit (375 passed, 53 xfailed), wrote test_evidence.
 - Tool: Claude Code, to read the code and draft the docs edit
 - What it produced: A docs/API.md edit of 34 added lines in one commit, 2b21bc0
 - Difficulties: Claude added a register example my plan did not list, and my claim comment promised I would run every command myself
-- What changed: I recorded the deviation, and still need to run the commands or say plainly that I did not
+- What changed: I recorded the deviation in Solution Approach and said plainly in the PR and here that I did not run the curl commands
 
 ---
 
